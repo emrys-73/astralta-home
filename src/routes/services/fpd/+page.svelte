@@ -83,7 +83,7 @@
    
 </script>
 
-<Spotlight className="-top-[700px] left-0 md:left-60 md:-top-80" fill="white" />
+<!-- <Spotlight className="-top-[700px] left-0 md:left-60 md:-top-80" fill="white" /> -->
 <div class="w-full overflow-auto h-full bg-gradient-to-b from-black to-transparent flex items-center flex-col justify-center gap-40 pt-40 md:pt-0">
     <div class="w-full h-[100vh] flex lg:flex-row flex-col-reverse bg-transparent lg:gap-10 xl:gap-32 gap-20 items-center justify-center pt-80 md:pt-[600px] lg:pt-20">
 		<CardContainer bind:isMouseEntered className="inter-var px-8">

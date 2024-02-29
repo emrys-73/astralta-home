@@ -10,8 +10,7 @@
     import TextGenerateEffect from "$lib/components/ui/TextGenerateEffect/TextGenerateEffect.svelte";
     import { fade, slide, scale } from 'svelte/transition';
 	  import { onMount } from "svelte";
-
-    const calendlyURL = 'https://calendly.com/adrian_cal/meet'
+    import { calendly } from "../stores";
 
     const words = 'Your dream idea into software in 14 days or its free.'
 
@@ -162,8 +161,8 @@
                 {/each}
               </div>
 
-              <Button href={calendlyURL} class="bg-[#716c5d] rounded-full z-40 flex w-full backdrop-blur-lg sm:w-min hover:px-20 transition-all ease-in-out duration-500 text-white hover:text-black">
-                  <span class="flex font-semibold px-12">Start here</span>
+              <Button href={$calendly} class="bg-[#716c5d] rounded-full z-40 flex w-full backdrop-blur-lg sm:w-min hover:px-20 transition-all ease-in-out duration-500 text-white hover:text-black">
+                  <span class="flex font-semibold px-12">Book a call with us</span>
               </Button>
               </div>
             {/if}
