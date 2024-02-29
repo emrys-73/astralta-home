@@ -74,11 +74,7 @@
 </script>
 
 
-<!-- <div
-	class="flex h-full min-h-screen w-full flex-col items-center justify-center overflow-hidden rounded-md bg-white antialiased bg-transparent dark:bg-transparent dark:bg-grid-white/[0.05]"
->
-	<InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
-</div> -->
+<!-- Praise the Lord -->
 
 <!-- {#if show} -->
 <div class=" bg-gradient-to-b from-transparent to-black">
