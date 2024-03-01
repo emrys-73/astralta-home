@@ -26,6 +26,11 @@
 			active: false,
 		},
 		{
+			title: "Pricing",
+			url: '/pricing',
+			active: false,
+		},
+		{
 			title: "About",
 			url: '/',
 			active: false,

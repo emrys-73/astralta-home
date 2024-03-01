@@ -78,13 +78,13 @@
 <!-- {#if show} -->
 <div class=" bg-gradient-to-b from-transparent to-black">
     <div
-        transition:scale={{ delay: 0, duration: 700 }} 
+        transition:scale={{ delay: 0, duration: 300 }} 
         class="flex h-full min-h-[90vh] overflow-hidden rounded-md px-4 antialiased  md:items-center md:justify-center z-10"
         >
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
         {#if show}
         <div
-            transition:scale={{ delay: 100, duration: 2700 }} 
+            transition:scale={{ delay: 100, duration: 700 }} 
             class="absolute top-0 right-0 w-3/4 overflow-hidden h-full justify-end items-center md:flex hidden"
          >
                 <img src="/boom.png" alt="boom" class="-mr-20 opacity-30">
@@ -99,7 +99,7 @@
         {/if}
         {#if show}
           <div 
-            transition:scale={{ delay: 100, duration: 700 }} 
+            transition:scale={{ delay: 100, duration: 300 }} 
             class="w-1/3 h-full min-h-60 min-w-40 absolute right-0 top-0 hidden md:flex"
             >
             <div class="w-full h-full flex-col justify-center px-12 gap-4 mt-2 items-end z-30 hidden">
@@ -119,7 +119,7 @@
             <div class="md:w-3/4 py-2 pr-20 xl:pr-32 flex flex-col">
                 {#if show}
                     <p 
-                        transition:fade={{ delay: 4100, duration: 2000 }}  
+                        transition:fade={{ delay: 4100, duration: 300 }}  
                         class="uppercase text-xl text-[#B3AC9F]"
                     >
                         Astralta
@@ -134,7 +134,7 @@
 
             {#if show}
                 <div
-                    transition:fade={{ delay: 2800, duration: 2000 }}  
+                    transition:fade={{ delay: 800, duration: 200 }}  
                     class="w-full md:w-2/5 lg:w-1/2 py-2 z-40 flex flex-col "
                 >
                     <p class="flex mx-auto text-base justify-start w-full font-normal text-neutral-300 opacity-70 md:opacity-100">
@@ -149,7 +149,7 @@
 
             {#if show}
               <div 
-                  transition:fade={{ delay: 3100, duration: 2000 }}  
+                  transition:fade={{ delay: 800, duration: 2000 }}  
                   class="py-5 w-full flex flex-col gap-4 z-40"
               >
               
@@ -170,7 +170,7 @@
             {#if show}
               <!-- Hidden -->
               <div
-                  transition:scale={{ delay: 4500, duration: 1200 }} 
+                  transition:scale={{ delay: 500, duration: 200 }} 
                   class="absolute hidden left-0 z-0 w-full h-full justify-center items-center md:hidden"
               >
 

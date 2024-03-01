@@ -11,6 +11,7 @@
         import { onMount } from "svelte";
         import { twMerge } from "tailwind-merge";
         import TracingBeam from "$lib/components/ui/TracingBeam/TracingBeam.svelte";
+        import { calendly } from "../../../stores.js"
     
         let isMouseEntered = false;
 
@@ -231,7 +232,7 @@
                 </div>
             {/each}
                 <div class="w-full h-full min-h-40 justify-center items-start flex">
-                    <Button href="https://calendly.com/adrian_cal/meet" class="rounded-2xl transition-all duration-300 ease-in-out px-8 py-1 hover:px-36 mt-8 bg-emerald-600 text-white hover:text-black">
+                    <Button href={$calendly} class="rounded-2xl transition-all duration-300 ease-in-out px-8 py-1 hover:px-36 mt-8 bg-emerald-600 text-white hover:text-black">
                         Let's start with a call
                     </Button>
                 </div>
