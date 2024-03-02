@@ -52,7 +52,7 @@
                 Development cost
             </p>
             <h2 class="text-4xl font-bold">
-                $5K - $10K
+                $2K - $10K
             </h2>
 
             <p class="opacity-40 py-1">
@@ -124,7 +124,7 @@
             </h2>
 
             <p class="opacity-40 py-1">
-                Active maintaining starts at 1200€/mo
+                Active maintaining starts at 200€/mo
             </p>
 
             <div class="w-full h-full flex flex-col gap-2 py-4">
@@ -237,7 +237,7 @@
             </h2>
 
             <p class="opacity-40 py-1">
-                Active maintaining starts at 2000€/mo
+                Active maintaining starts at 1200€/mo
             </p>
 
             <div class="w-full h-full flex flex-col gap-2 py-4">
