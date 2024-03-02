@@ -267,7 +267,7 @@
                           </svg>
     
                           <span>
-                            Advanced Search Engine Optimisation
+                            Advanced SEO
                           </span>
                     </li>
                     <li class="w-full flex flex-row gap-2 justify-start items-center">
