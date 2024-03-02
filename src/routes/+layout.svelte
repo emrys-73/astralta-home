@@ -28,7 +28,7 @@
 		{
 			title: "Pricing",
 			url: '/pricing',
-			active: false,
+			active: true,
 		},
 		{
 			title: "About",
