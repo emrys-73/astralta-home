@@ -65,6 +65,11 @@
 			active: true,
 		},
 		{
+			title: "Pricing",
+			url: '/pricing',
+			active: true,
+		},
+		{
 			title: "Contact",
 			url: 'mailto:montoya@astralta.com',
 			active: true,
