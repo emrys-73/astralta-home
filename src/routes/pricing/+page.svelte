@@ -248,7 +248,7 @@
                           </svg>
     
                           <span>
-                            4 - 16 Pages
+                            16+ Pages
                           </span>
                     </li>
                     <li class="w-full flex flex-row gap-2 justify-start items-center">
