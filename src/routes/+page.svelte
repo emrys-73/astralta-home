@@ -2,6 +2,7 @@
 // @ts-nocheck
 
     import InfiniteMovingCards from "$lib/components/ui/InfiniteMovingCards/InfiniteMovingCards.svelte";
+    import InfiniteMovingBoxes from "$lib/components/ui/InfiniteMovingCards/InfiniteMovingBoxes.svelte";
     import ContainerScrollAnimation from "$lib/components/ui/ContainerScrollAnimation/ContainerScrollAnimation.svelte";
     import { useTransform, useViewportScroll } from "svelte-motion";
     import GoogleGeminiEffect from "$lib/components/ui/GoogleGeminiEffect/GoogleGeminiEffect.svelte";
@@ -12,7 +13,7 @@
 	  import { onMount } from "svelte";
     import { calendly } from "../stores";
 
-    const words = 'Your dream idea into software in 14 days or its free.'
+    const words = 'Bring your business to the world wide web'
 
 
     const actionButtons = [
@@ -69,165 +70,127 @@
           },
         ]
     
+        const testimonials = [
+		{
+			quote:
+				"To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+			name: 'William Shakespeare',
+			title: 'Hamlet',
+      content: 'ASTRALTA ✱',
+		},
+		{
+			quote: 'All that we see or seem is but a dream within a dream.',
+			name: 'Edgar Allan Poe',
+			title: 'A Dream Within a Dream',
+      content: 'ASTRALTA ✱',
+		},
+		{
+			quote:
+				'It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.',
+			name: 'Jane Austen',
+			title: 'Pride and Prejudice',
+      content: 'ASTRALTA ✱',
+
+		},
+		{
+			quote:
+				'Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.',
+			name: 'Herman Melville',
+			title: 'Moby-Dick',
+      content: 'ASTRALTA ✱',
+		}
+	];
+
+
+  const cards = [
+		{
+			quote:
+				"To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+			name: 'William Shakespeare',
+			title: 'Hamlet',
+      content: '/cards/01.png',
+		},
+		{
+			quote: 'All that we see or seem is but a dream within a dream.',
+			name: 'Edgar Allan Poe',
+			title: 'A Dream Within a Dream',
+      content: '/cards/02.png',
+		},
+		{
+			quote:
+				'It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.',
+			name: 'Jane Austen',
+			title: 'Pride and Prejudice',
+      content: '/cards/03.png',
+
+		},
+		{
+			quote:
+				'Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.',
+			name: 'Herman Melville',
+			title: 'Moby-Dick',
+      content: '/cards/04.png',
+		},
+    {
+			quote:
+				'It is a truth acknowledged, that a single man in possession of a good fortune, must be in want of a wife.',
+			name: 'Jane MCArthur',
+			title: 'Pride and Prejudice 2',
+      content: '/cards/05.png',
+
+		},
+
+
+	];
 
 </script>
 
 
 <!-- Praise the Lord -->
 
-<!-- {#if show} -->
-<div class=" bg-gradient-to-b from-transparent to-black">
-    <div
-        transition:scale={{ delay: 0, duration: 300 }} 
-        class="flex h-full min-h-[90vh] overflow-hidden rounded-md px-4 antialiased  md:items-center md:justify-center z-10"
-        >
-        <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
-        {#if show}
-        <div
-            transition:scale={{ delay: 100, duration: 700 }} 
-            class="absolute top-0 right-0 w-3/4 overflow-hidden h-full justify-end items-center md:flex hidden"
-         >
-                <img src="/boom.png" alt="boom" class="-mr-20 opacity-30">
-            </div>
-        {/if}
-        {#if show}
-        <div
-            class="absolute top-0 right-0 w-3/4 h-full justify-end items-center md:flex hidden"
-         >
-                <div class=" bg-gradient-to-r from-transparent to-black w-full h-full opacity-80"/>
-            </div>
-        {/if}
-        {#if show}
-          <div 
-            transition:scale={{ delay: 100, duration: 300 }} 
-            class="w-1/3 h-full min-h-60 min-w-40 absolute right-0 top-0 hidden md:flex"
-            >
-            <div class="w-full h-full flex-col justify-center px-12 gap-4 mt-2 items-end z-30 hidden">
-              {#each services as s}
-              <Button href={s.url} class="bg-[#FFF] rounded-full hover:text-black hover:px-8 px-6 bg-opacity-10 opacity-80 backdrop-blur-md border-[0.5px] hover:opacity-100 transition-all ease-in-out duration-500 text-white font-semibold">
-                {s.title}
-              </Button>
-              <!-- <Button href={s.url} class="bg-[#FFF] bg-opacity-10 opacity-100 backdrop-blur-md border-[0.5px] hover:opacity-100 transition-all ease-in-out duration-500 text-white font-semibold border-[#B3AC9F] border-opacity-60 hover:text-black">
-                {s.title}
-              </Button> -->
-              {/each}
-            </div>
-          </div>
-        {/if}
 
-        <div class=" relative justify-start flex flex-col items-start z-10 mx-auto w-full p-4 pt-20 md:pt-0 gap-4 md:gap-8 lg:pl-10">
-            <div class="md:w-3/4 py-2 pr-20 xl:pr-32 flex flex-col">
-                {#if show}
-                    <p 
-                        transition:fade={{ delay: 4100, duration: 300 }}  
-                        class="uppercase text-xl text-[#B3AC9F]"
-                    >
-                        Astralta
-                    </p>
-                {/if}
-                <h1
-                    class="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-4xl font-bold text-transparent md:text-6xl"
-                >
-                    <TextGenerateEffect {words} />
-                </h1>
-            </div>
-
-            {#if show}
-                <div
-                    transition:fade={{ delay: 800, duration: 200 }}  
-                    class="w-full md:w-2/5 lg:w-1/2 py-2 z-40 flex flex-col "
-                >
-                    <p class="flex mx-auto text-base justify-start w-full font-normal text-neutral-300 opacity-70 md:opacity-100">
-                      <!-- We are a Design-Driven Software Studio with a worldwide pool of experts ready to build groundbreaking Done-For-You Software powered by AI. -->
-                      We are a design-driven software studio offering a pool of worldwide experts ablte to build groundbreaking software powered by AI.
-                  </p>
-                  <p class="opacity-40">
-                    Based in Munich, Germany
-                  </p>
-                </div>
-            {/if}
-
-            {#if show}
-              <div 
-                  transition:fade={{ delay: 800, duration: 2000 }}  
-                  class="py-5 w-full flex flex-col gap-4 z-40"
-              >
-              
-              <div class="w-full h-full flex-row flex-wrap gap-2 z-50 hidden">
-                {#each services as s}
-                <Button href={s.url} class="bg-[#FFF] bg-opacity-10 opacity-50 backdrop-blur-md border-[0.5px] hover:opacity-100 transition-all ease-in-out duration-300 text-white font-semibold border-[#B3AC9F] border-opacity-60 hover:text-black">
-                  {s.title}
-                </Button>
-                {/each}
-              </div>
-
-              <Button href={$calendly} class="bg-[#716c5d] rounded-full z-40 flex w-full backdrop-blur-lg sm:w-min hover:px-20 transition-all ease-in-out duration-500 text-white hover:text-black">
-                  <span class="flex font-semibold px-12">Book a call with us</span>
-              </Button>
-              </div>
-            {/if}
-
-            {#if show}
-              <!-- Hidden -->
-              <div
-                  transition:scale={{ delay: 500, duration: 200 }} 
-                  class="absolute hidden left-0 z-0 w-full h-full justify-center items-center md:hidden"
-              >
-
-                <img src="/boom.png" alt="boom" class="-mr-20 opacity-60">
-              </div>
-            {/if}
-
-           
-        </div>
-    </div>
-<!-- 
-    <div>
-       What we do
-    </div>
-
-    <div>
-      How we do it
-    </div>
-
-    <div>
-      Why we do it
-    </div>
-
-    <div>
-      Our story
-    </div> -->
-
-
-
-    <div class="w-full h-full flex flex-col gap-4 justify-start items-center pb-60 z-50">
-      <span class="opacity-40">
-          our services
-      </span>
-
-      <div class="w-full h-full flex flex-row gap-2 justify-center items-center flex-wrap z-50">
-          {#each actionButtons as s}
-              {#if s.active}
-                  <Button href={s.url} class="bg-white bg-opacity-10 rounded-full px-6 hover:px-12 hover:text-black transition-all duration-300 text-white ease-in-out">
-                      {s.title}
-                  </Button>
-              {/if}
-          {/each}
-      </div>
+<div class="w-full h-full min-h-screen flex flex-col">
+  <div
+  class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden rounded-md bg-white antialiased dark:bg-black dark:bg-grid-white/[0.05] lg:pt-[40vh] pt-[25vh]"
+  >
+  <div class="md:w-3/5 w-full px-8 h-full min-h-[40vh] flex">
+    <TextGenerateEffect {words} />
   </div>
 
+  <div>
+    <InfiniteMovingBoxes items={cards} direction="left" speed="fast" />
+  </div>
+
+  <div class="pb-40 pt-10">
+    <InfiniteMovingCards items={testimonials} direction="right" speed="normal" />
+    <InfiniteMovingCards items={testimonials} direction="left" speed="normal" />
+  </div>
+  </div>
+
+  <div class=" w-full h-full min-h-[60vh] flex flex-col md:flex-row px-6 md:px-10 lg:px-20 py-20">
+    <div class="w-1/4 h-full pt-2 py-10 shrink-0">
+      ✱ Welcome
+    </div>
+    <div class="w-auto h-full flex justify-start ">
+      <div>
+        <p class=" text-5xl md:text-7xl font-thin">
+          We are a purpose-driven studio based in Munich, Germany - with expertise across branding, web design, web development and AI.
+        </p>
+  
+        <div class="h-40 w-full flex flex-col md:flex-row py-10 mb-32 sm:mb-12">
+          <div class="w-1/3 md:px-6 py-2">
+            <span>
+              (Approach)
+            </span>
+          </div>
+
+          <div class="text-[#727272]">
+            We help you find clarity in your message, and communicate that to your audience in an efficient way. We use purposeful design and consumer psychology to cut through the noise and put focus on your message. 
+            <br> <br>
+            Put simply, <b class="font-normal text-white">we make it easier for brands to communicate their vision</b>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-<!-- {/if} -->
-
-
-
-
-<!-- <div class="flex flex-col overflow-hidden">
-	<ContainerScrollAnimation {users}>
-		<h1 slot="titleComponent" class="text-4xl font-semibold text-black dark:text-white">
-			Unleash the power of <br />
-			<span class="mt-1 text-4xl font-bold leading-none md:text-[6rem]"> Scroll Animations </span>
-		</h1>
-	</ContainerScrollAnimation>
-</div> -->
