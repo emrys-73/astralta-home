@@ -53,14 +53,14 @@
     <div
         bind:this={containerRef}
         class={cn(
-            'scroller relative z-20  max-w-7xl overflow-hidden text-white dark:text-gray-100 [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
+            'scroller relative z-20 max-w-[99vw] overflow-hidden text-white dark:text-gray-100 [mask-image:linear-gradient(to_right,transparent,white_60%,white_80%,transparent)]',
             className
         )}
     >
         <ul
             bind:this={scrollerRef}
             class={cn(
-                ' flex w-max min-w-full shrink-0 flex-nowrap gap-4',
+                ' flex w-max min-w-full shrink-0 flex-nowrap leading-none ',
                 start && 'animate-scroll ',
                 pauseOnHover && 'hover:[animation-play-state:paused]'
             )}
@@ -68,7 +68,7 @@
             {#each items as item, idx (item.name)}
 
                     <div class="w-full">
-                      <h2 class="text-9xl font-bold">
+                      <h2 class="text-[300px] font-bold">
                         {item.content}
                       </h2>
 

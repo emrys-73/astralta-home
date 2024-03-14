@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
 	import '../app.pcss';
 	import Sun from "svelte-radix/Sun.svelte";
   	import Moon from "svelte-radix/Moon.svelte";
@@ -7,6 +9,9 @@
 	import { ModeWatcher } from 'mode-watcher';
 	import { setMode } from 'mode-watcher';
 	import Circle from '$lib/components/ui/shapes/Circle.svelte';
+	import IntersectionObserver from "svelte-intersection-observer";
+	import { quintOut, cubicInOut, quintInOut } from 'svelte/easing';
+	import { fade, slide, scale, fly, blur } from 'svelte/transition';
 	
 	import * as Menubar from "$lib/components/ui/menubar";
  
@@ -94,6 +99,8 @@
 			active: true,
 		},
 	]
+
+	let node;
 	
 </script>
 
@@ -152,47 +159,57 @@
 		<slot />
 	</div>
 
+
+
 	<div class="flex w-full min-h-[80vh] bg-gradient-to-b py-20 from-[#6939F1] to-black text-white text-xs justify-end items-center relative flex-col overflow-hidden ">
 		<div class="absolute -bottom-[40vh] w-[60vw] h-[100vh] flex bg-black rounded-full blur-[200px] z-10"/>
 
-		<div class="text-white w-1/2 z-20">
-			<ul class="flex flex-col gap-2">
-				<!-- <li>
-					<a href="/#work" class="hover:opacity-100 opacity-70 text-2xl hover:text-3xl transition-all duration-300 ease-in-out">
-						<h3 class="font-semibold">
-							Projects
-						</h3>
-					</a>
-				</li>
-				<li>
-					<a href="/pricing" class="hover:opacity-100 opacity-70 text-2xl hover:text-3xl transition-all duration-300 ease-in-out w-full">
-						<h3 class="font-semibold">
-							Pricing
-						</h3>
-					</a>
-				</li> -->
-				<li>
-					<a href="mailto:montoya@astralta.com" class="hover:opacity-100 opacity-70 text-2xl hover:text-3xl transition-all duration-300 ease-in-out">
-						<h3 class="font-semibold">
-							Get in touch
-						</h3>
-					</a>
-				</li>
-			</ul>
-		</div>
+		<IntersectionObserver element={node}  let:intersecting>
+			<div bind:this={node} class="w-full px-20 flex md:px-40 lg:px-60">
+				{#if intersecting}
+				<div 
+					transition:fly={{ delay: 50, duration: 2500, x: 800, y: 0, opacity: 0.01, easing: quintOut }}
+					class="text-white w-1/2 z-20"
+					>
+					<ul class="flex flex-col gap-2">
+						<!-- <li>
+							<a href="/#work" class="hover:opacity-100 opacity-70 text-2xl hover:text-3xl transition-all duration-300 ease-in-out">
+								<h3 class="font-semibold">
+									Projects
+								</h3>
+							</a>
+						</li>
+						<li>
+							<a href="/pricing" class="hover:opacity-100 opacity-70 text-2xl hover:text-3xl transition-all duration-300 ease-in-out w-full">
+								<h3 class="font-semibold">
+									Pricing
+								</h3>
+							</a>
+						</li> -->
+						<li>
+							<a href="mailto:montoya@astralta.com" class="hover:opacity-100 opacity-70 text-2xl hover:text-3xl transition-all duration-300 ease-in-out">
+								<h3 class="font-semibold">
+									Get in touch
+								</h3>
+							</a>
+						</li>
+					</ul>
+				</div>
+				{/if}
+			</div>
+		</IntersectionObserver>
+		
 
 		<div class="pt-20">
 			<InfiniteMovingFooter items={testimonials} direction="right" speed="slow"/>
 		</div>
-		<span class="w-full h-12 opacity-50 text-center justify-between px-6 md:px-10 lg:px-20 items-center flex absolute bottom-4 flex-col md:flex-row gap-4">
+		<div class="w-full h-12 opacity-50 text-center justify-between px-6 md:px-10 lg:px-20 items-center flex absolute bottom-4 flex-col md:flex-row gap-4">
 			<span>
 				Designed in Munich, Germany
 			</span>
 			<span>
 				Copyright © 2023 Astralta Inc. All rights reserved.
 			</span>
-		</span>
+		</div>
 	</div>
 </div>
-
-

@@ -6,7 +6,7 @@
         export let items;
         export let direction = "left";
         export let speed = "fast";
-        export let pauseOnHover = true;
+        export let pauseOnHover = false;
         export let className = void 0;
         let containerRef;
         let scrollerRef;
@@ -53,7 +53,7 @@
         <div
             bind:this={containerRef}
             class={cn(
-                'scroller relative h-full z-20 w-full overflow-hidden text-white dark:text-gray-100 [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
+                'scroller relative h-full z-20 w-[99vw] overflow-hidden text-white dark:text-gray-100 [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
                 className
             )}
         >
