@@ -149,7 +149,13 @@
   let node;
   let boxes;
   let sparkles;
+  let workHeader;
+  let leftcol;
+  let rightcol;
 
+
+const bluredClass = "scale-90 hover:scale-100 blur-sm hover:blur-0 transition-all duration-300 ease-in-out"
+const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in-out"
 </script>
 
 
@@ -211,7 +217,7 @@
 
   </div>
 
-  <div class=" w-full h-full min-h-[60vh] flex flex-col md:flex-row px-6 md:px-10 lg:px-20 py-20 bg-black">
+  <div class=" w-full h-full min-h-[60vh] flex flex-col md:flex-row px-6 md:px-10 lg:px-20 pb-40 bg-black overflow-hidden">
     <!-- <IntersectionObserver element={node} let:intersecting>
       <div bind:this={node}>
         {#if intersecting}
@@ -260,8 +266,197 @@
   </div>
 </div>
 
-<div class="bg-black w-full h-full min-h-screen my-40 hidden">
-  <h2 class="w-full text-[400px] text-white font-semibold uppercase">
-    work
-  </h2>
+<div class="bg-black w-full h-full flex flex-col px-6 md:px-10 lg:px-20 justify-start items-center overflow-hidden">
+<div class="py-20 min-h-[40vh]">
+  <IntersectionObserver element={workHeader} let:intersecting>
+    <div bind:this={workHeader}>
+      {#if intersecting}
+      <div
+      transition:fly={{ delay: 50, duration: 2500, x: -600, y: 0, opacity: 0.01, easing: quintOut }}
+        >
+        <h2 class="w-full text-9xl md:text-[200px] lg:text-[300px] xl:text-[400px] text-white font-bold uppercase flex">
+          work
+        </h2>
+      </div>
+      {/if}
+      </div>
+    </IntersectionObserver>
+</div>
+
+  <!-- <div class="w-full min-h-screen mb-40">
+    <div class="w-full h-full flex flex-col lg:flex-row gap-10 justify-center items-start">
+      
+      <IntersectionObserver element={leftcol} once={true} let:intersecting>
+        <div bind:this={leftcol}>
+          {#if intersecting}
+          <div 
+          transition:fly={{ delay: 50, duration: 2500, x: -600, y: 0, opacity: 0.01, easing: quintOut }}
+            class="w-full h-full flex flex-col gap-10">
+            <div>
+              <a href="/projects/horizen" class="">
+                <img src="/posters/hrzn.png" alt="hrzn" class="{biggerClass}">
+              </a>
+
+              <div class="px-20 flex flex-col gap-2">
+                <span class="uppercase">
+                  HoRizen 
+                </span>
+                <span>
+                  (Web App, Brand, AI)
+                </span>
+              </div>
+            </div>
+    
+            <div>
+              <a href="/projects/portfolio" class="">
+                <img src="/posters/adrian.png" alt="ad" class="{biggerClass}">
+              </a>
+
+              <div class="px-20 flex flex-col gap-2">
+                <span class="uppercase">
+                  Personal Website
+                </span>
+                <span>
+                  (Web design, Brand, AI)
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/if}
+          </div>
+        </IntersectionObserver>
+
+      
+      <IntersectionObserver element={rightcol} once={true} let:intersecting>
+        <div bind:this={rightcol}>
+          {#if intersecting}
+            <div 
+              transition:fly={{ delay: 50, duration: 2500, x: 600, y: 0, opacity: 0.01, easing: quintOut }}
+              class="w-full h-full flex flex-col gap-10 lg:mt-40">
+              <div>
+                <a href="/projects/aivery" class="">
+                  <img src="/posters/aiv.png" alt="ai" class="{biggerClass}">
+                </a>
+
+                <div class="px-20 flex flex-col gap-2">
+                  <span class="uppercase">
+                    Aivery
+                  </span>
+                  <span>
+                    (AI, Brand, MVP, Startup)
+                  </span>
+                </div>
+              </div>
+      
+              <div>
+                <a href="/projects/studio" class="">
+                  <img src="/posters/st.png" alt="st" class="{biggerClass}">
+                </a>
+
+                <div class="px-20 flex flex-col gap-2">
+                  <span class="uppercase">
+                    Astralta
+                  </span>
+                  <span>
+                    (Web App, AI, SaaS)
+                  </span>
+                </div>
+              </div>
+            </div>
+          {/if}
+          </div>
+          </IntersectionObserver>
+
+    </div>
+  </div> -->
+
+  <div class="w-full min-h-screen mb-40">
+    <div class="w-full h-full flex flex-col lg:flex-row gap-10 justify-center items-start">
+      
+      <IntersectionObserver element={leftcol} once={true} let:intersecting>
+        <div bind:this={leftcol}>
+          {#if intersecting}
+          <div 
+          transition:fly={{ delay: 50, duration: 2500, x: -600, y: 0, opacity: 0.01, easing: quintOut }}
+            class="w-full h-full flex flex-col gap-10">
+            <div>
+              <div class="">
+                <img src="/posters/hrzn.png" alt="hrzn" class="{biggerClass}">
+              </div>
+
+              <div class="px-20 flex flex-col gap-2">
+                <span class="uppercase">
+                  HoRizen 
+                </span>
+                <span>
+                  (Web App, Brand, AI)
+                </span>
+              </div>
+            </div>
+    
+            <div>
+              <div class="">
+                <img src="/posters/adrian.png" alt="ad" class="{biggerClass}">
+              </div>
+
+              <div class="px-20 flex flex-col gap-2">
+                <span class="uppercase">
+                  Personal Website
+                </span>
+                <span>
+                  (Web design, Brand, AI)
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/if}
+          </div>
+        </IntersectionObserver>
+
+      
+      <IntersectionObserver element={rightcol} once={true} let:intersecting>
+        <div bind:this={rightcol}>
+          {#if intersecting}
+            <div 
+              transition:fly={{ delay: 50, duration: 2500, x: 600, y: 0, opacity: 0.01, easing: quintOut }}
+              class="w-full h-full flex flex-col gap-10 lg:mt-40">
+              <div>
+                <div class="">
+                  <img src="/posters/aiv.png" alt="ai" class="{biggerClass}">
+                </div>
+
+                <div class="px-20 flex flex-col gap-2">
+                  <span class="uppercase">
+                    Aivery
+                  </span>
+                  <span>
+                    (AI, Brand, MVP, Startup)
+                  </span>
+                </div>
+              </div>
+      
+              <div>
+                <div class="">
+                  <img src="/posters/st.png" alt="st" class="{biggerClass}">
+                </div>
+
+                <div class="px-20 flex flex-col gap-2">
+                  <span class="uppercase">
+                    Astralta
+                  </span>
+                  <span>
+                    (Web App, AI, SaaS)
+                  </span>
+                </div>
+              </div>
+            </div>
+          {/if}
+          </div>
+          </IntersectionObserver>
+
+    </div>
+  </div>
+
 </div>
