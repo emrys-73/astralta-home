@@ -271,7 +271,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
 <div class="py-20 min-h-[40vh]">
   <IntersectionObserver element={workHeader} let:intersecting>
     <div bind:this={workHeader}>
-      {#if intersecting}
+      {#if true}
       <div
       transition:fly={{ delay: 50, duration: 2500, x: -600, y: 0, opacity: 0.01, easing: quintOut }}
         >
