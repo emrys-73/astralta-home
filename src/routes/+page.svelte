@@ -4,6 +4,7 @@
     import IntersectionObserver from "svelte-intersection-observer";
     import InfiniteMovingCards from "$lib/components/ui/InfiniteMovingCards/InfiniteMovingCards.svelte";
     import InfiniteMovingBoxes from "$lib/components/ui/InfiniteMovingCards/InfiniteMovingBoxes.svelte";
+    import * as Accordion from "$lib/components/ui/accordion/index.ts";
     import ContainerScrollAnimation from "$lib/components/ui/ContainerScrollAnimation/ContainerScrollAnimation.svelte";
     import { useTransform, useViewportScroll } from "svelte-motion";
     import GoogleGeminiEffect from "$lib/components/ui/GoogleGeminiEffect/GoogleGeminiEffect.svelte";
@@ -166,7 +167,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
   <div
   class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden rounded-md bg-white antialiased dark:bg-black dark:bg-grid-white/[0.05] lg:pt-[30vh] pt-[25vh]"
   >
-  <div class="w-full px-8 h-full min-h-[60vh] flex flex-col">
+  <div class="w-full px-8 h-full min-h-[40vh] flex flex-col">
     <div class="md:w-4/5 w-full px-8 md:px-10 lg:px-20">
       <TextGenerateEffect {words} />
     </div>
@@ -459,4 +460,74 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
     </div>
   </div>
 
+
+  <div class=" w-full h-full min-h-[60vh] flex flex-col md:flex-row px-6 md:px-10 lg:px-20 pb-40 bg-black overflow-hidden">
+    <div class="md:w-1/4 w-full h-full pt-2 py-10 shrink-0">
+      ✱ Frequently Asked Questions
+    </div>
+
+
+    
+    <div class="w-full min-h-[90vh]">
+      <IntersectionObserver element={workHeader} let:intersecting>
+        <div bind:this={workHeader}>
+          {#if intersecting}
+          <div
+          transition:fly={{ delay: 50, duration: 2500, x: -600, y: 0, opacity: 0.01, easing: quintOut }}
+            >
+            <Accordion.Root class="w-full text-xl">
+              <Accordion.Item value="item-1" class="py-6">
+                <Accordion.Trigger class="text-xl text-start">What should I expect when starting a project?</Accordion.Trigger>
+                <Accordion.Content
+                  class="text-[#9c9c9c] text-xl font-light"  
+                >
+                  Once you've submitted the <a href="/apply" class="text-white italic opacity-80 hover:opacity-100 transition-all duration-0 ease-in-out">on-boarding form</a>, we'll meet with you to guide you through each step of the development process.
+                  </Accordion.Content
+                >
+              </Accordion.Item>
+              <Accordion.Item value="item-2" class="py-6">
+                <Accordion.Trigger class="text-xl text-start">How long does a project take?</Accordion.Trigger>
+                <Accordion.Content
+                  class="text-[#9c9c9c] text-xl font-light"  
+                >
+                  Most of the projects take between 1-3 months. Single-page websites can take between 2-4 weeks.
+                  </Accordion.Content
+                >
+              </Accordion.Item>
+              <Accordion.Item value="item-3" class="py-6">
+                <Accordion.Trigger class="text-xl text-start">How much does a project cost?</Accordion.Trigger>
+                <Accordion.Content
+                  class="text-[#9c9c9c] text-xl font-light"  
+                >
+                  We charge a simple project fee, depending on scope of work. Most of our web design projects range between $5,000 for a single landing page, to $20,000 for a complex, multipage CMS site. We don't offer hourly work. SaaS development starts at $25.000.
+                  </Accordion.Content
+                >
+              </Accordion.Item>
+              <Accordion.Item value="item-4" class="py-6">
+                <Accordion.Trigger class="text-xl text-start">What are the payment terms for a project?</Accordion.Trigger>
+                <Accordion.Content
+                  class="text-[#9c9c9c] text-xl font-light"  
+                >
+                  50% upfront and 50% after launch. We also offer custom pricing plans on a case-by-case basis. This is all discussed in our first meeting.
+                  </Accordion.Content
+                >
+              </Accordion.Item>
+              <Accordion.Item value="item-5" class="py-6">
+                <Accordion.Trigger class="text-xl text-start">Do you require finalized designs when reaching out?</Accordion.Trigger>
+                <Accordion.Content
+                  class="text-[#9c9c9c] text-xl font-light"  
+                >
+                  No - we can definitely use whatever you might already have but we offer a Done-For-You service at the core. Meaning we'll take care of each and every step required to the completion of your project.
+                  </Accordion.Content
+                >
+              </Accordion.Item>
+            </Accordion.Root>
+          </div>
+          {/if}
+        </div>  
+      </IntersectionObserver>
+    </div>
+
+
+  </div>
 </div>

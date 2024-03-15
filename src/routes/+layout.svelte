@@ -12,6 +12,7 @@
 	import IntersectionObserver from "svelte-intersection-observer";
 	import { quintOut, cubicInOut, quintInOut } from 'svelte/easing';
 	import { fade, slide, scale, fly, blur } from 'svelte/transition';
+	import { footerColor } from '../stores';
 	
 	import * as Menubar from "$lib/components/ui/menubar";
  
@@ -75,7 +76,7 @@
 			active: false,
 		},
 		{
-			title: "Get in Touch",
+			title: "Start A Project",
 			url: 'mailto:montoya@astralta.com',
 			active: true,
 		},
@@ -94,7 +95,7 @@
 			active: false,
 		},
 		{
-			title: "Get in Touch",
+			title: "Start A Project",
 			url: 'mailto:montoya@astralta.com',
 			active: true,
 		},
@@ -161,7 +162,7 @@
 
 
 
-	<div class="flex w-full min-h-[80vh] bg-gradient-to-b py-20 from-[#6939F1] to-black text-white text-xs justify-end items-center relative flex-col overflow-hidden ">
+	<div class="flex w-full min-h-[80vh] py-20 {$footerColor} text-white text-xs justify-end items-center relative flex-col overflow-hidden ">
 		<div class="absolute -bottom-[40vh] w-[60vw] h-[100vh] flex bg-black rounded-full blur-[200px] z-10"/>
 
 		<IntersectionObserver element={node}  let:intersecting>
