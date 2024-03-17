@@ -153,6 +153,7 @@
   let workHeader;
   let leftcol;
   let rightcol;
+  let testimonial;
 
 
 const bluredClass = "scale-90 hover:scale-100 blur-sm hover:blur-0 transition-all duration-300 ease-in-out"
@@ -268,9 +269,11 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
 </div>
 
 <div class="bg-black w-full h-full flex flex-col px-6 md:px-10 lg:px-20 justify-start items-center overflow-hidden">
+
+
 <div class="py-20 min-h-[40vh]">
   <IntersectionObserver element={workHeader} let:intersecting>
-    <div bind:this={workHeader}>
+    <div bind:this={workHeader} class="">
       {#if true}
       <div
       transition:fly={{ delay: 50, duration: 2500, x: -600, y: 0, opacity: 0.01, easing: quintOut }}
@@ -372,7 +375,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
     </div>
   </div> -->
 
-  <div class="w-full min-h-screen mb-40">
+  <div class="w-full min-h-[180vh]">
     <div class="w-full h-full flex flex-col lg:flex-row gap-10 justify-center items-start">
       
       <IntersectionObserver element={leftcol} once={true} let:intersecting>
@@ -460,6 +463,30 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
     </div>
   </div>
 
+  <div class=" w-full h-full min-h-[80vh] flex flex-col md:flex-col px-6 md:px-10 lg:px-20 pb-40 bg-black overflow-hidden">
+    <div class="md:w-1/4 w-full h-full pt-2 py-10 shrink-0">
+      (What people say)
+    </div>
+    <IntersectionObserver element={testimonial} let:intersecting>
+      <div bind:this={testimonial}>
+        {#if intersecting}
+        <div
+        transition:fly={{ delay: 50, duration: 2500, x: 600, y: 0, opacity: 0.01, easing: quintOut }}
+          >
+          <div>
+            <p class=" text-5xl md:text-7xl font-thin">
+              "Outstanding high-quality service and deliverables. The collaboration was great, and the final result was top-notch. Definitely recommend it."
+            </p>
+          </div>
+          <div class="text-white opacity-50 text-xl font-thin py-8">
+            Co-Founder - HoRizen
+          </div>
+          </div>
+        {/if}
+        </div>
+      </IntersectionObserver>
+  </div>
+
 
   <div class=" w-full h-full min-h-[60vh] flex flex-col md:flex-row px-6 md:px-10 lg:px-20 pb-40 bg-black overflow-hidden">
     <div class="md:w-1/4 w-full h-full pt-2 py-10 shrink-0">
@@ -481,7 +508,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
                 <Accordion.Content
                   class="text-[#9c9c9c] text-xl font-light"  
                 >
-                  Once you've submitted the <a href="/apply" class="text-white italic opacity-80 hover:opacity-100 transition-all duration-0 ease-in-out">on-boarding form</a>, we'll meet with you to guide you through each step of the development process.
+                  Once you've submitted the <a href="/apply" class="text-white italic opacity-80 hover:opacity-100 transition-all duration-0 ease-in-out">application form</a>, we'll meet with you to guide you through each step of the development process.
                   </Accordion.Content
                 >
               </Accordion.Item>
@@ -527,7 +554,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
         </div>  
       </IntersectionObserver>
     </div>
-
+    <!-- Outstanding high-quality service and deliverables. The collaboration was great, and the final result was top-notch. Recommend it. -->
 
   </div>
 </div>

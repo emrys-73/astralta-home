@@ -3,7 +3,7 @@
     import { footerColor } from "../../../stores";
 
     onMount( async () => {
-        footerColor.set("bg-gradient-to-b from-[#71FF5F] to-[#5EE2FF]")
+        footerColor.set("bg-gradient-to-b from-[#FF620B] to-[#000000]")
     })
 
 </script>
