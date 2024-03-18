@@ -14,7 +14,7 @@
     import { fade, slide, scale, fly, blur } from 'svelte/transition';
 	  import { onMount } from "svelte";
     import { quintOut, cubicInOut, quintInOut } from 'svelte/easing';
-    import { calendly } from "../stores";
+    import { calendly, footerColor } from "../stores";
 
     const words = 'Bring your business to the world wide web'
 
@@ -40,7 +40,6 @@
                 url: "/services/ai",
                 active: true,
             },
-
         ]
 
         let show;
@@ -48,6 +47,7 @@
 
         onMount(() => {
             show = true;
+            footerColor.set("bg-gradient-to-b from-[#6939F1] to-black")
         })
 
         let services = [
@@ -290,9 +290,9 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
           transition:fly={{ delay: 50, duration: 1500, x: -600, y: 0, opacity: 0.01, easing: quintOut }}
             class="w-full h-full flex flex-col gap-10">
             <div>
-              <div class="">
+              <a href="/projects/horizen" class="">
                 <img src="/posters/hrzn.png" alt="hrzn" class="{biggerClass}">
-              </div>
+              </a>
 
               <div class="px-20 flex flex-col gap-2">
                 <span class="uppercase">
@@ -305,9 +305,9 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
             </div>
 
             <div>
-              <div class="">
+              <a href="https://adrian.astralta.com/" class="">
                 <img src="/posters/adrian.png" alt="ad" class="{biggerClass}">
-              </div>
+              </a>
 
               <div class="px-20 flex flex-col gap-2">
                 <span class="uppercase">
@@ -331,9 +331,9 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
           transition:fly={{ delay: 50, duration: 1500, x: 600, y: 0, opacity: 0.01, easing: quintOut }}
             class="w-full h-full flex flex-col gap-10 lg:mt-40">
             <div>
-              <div class="">
+              <a href="/projects/aivery" class="">
                 <img src="/posters/aiv.png" alt="ai" class="{biggerClass}">
-              </div>
+              </a>
 
               <div class="px-20 flex flex-col gap-2">
                 <span class="uppercase">
@@ -346,9 +346,9 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
             </div>
     
             <div>
-              <div class="">
+              <a href="/projects/studio" class="">
                 <img src="/posters/st.png" alt="st" class="{biggerClass}">
-              </div>
+              </a>
 
               <div class="px-20 flex flex-col gap-2">
                 <span class="uppercase">
@@ -367,34 +367,36 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
   </div>
 </div>
 
-<div class="bg-black min-h-screen w-full h-full flex flex-col px-6 md:px-10 lg:px-20 justify-start items-center overflow-hidden">
-  <div class=" w-full h-full min-h-[140vh] flex flex-col md:flex-col px-6 md:px-10 lg:px-20 justify-center items-center overflow-hidden">
+<div class="bg-black w-full h-full flex flex-col px-6 md:px-10 lg:px-20 justify-start items-center overflow-hidden">
+  <div class=" w-full h-full min-h-[140vh] md:min-h-[90vh] flex flex-col md:flex-col px-6 md:px-10 lg:px-20 justify-center items-center overflow-hidden">
     <div class="w-full h-full pt-2 py-10 shrink-0 text-start">
       (What people say)
     </div>
-    <IntersectionObserver element={test} let:intersecting>
-      <div bind:this={test} class="min-h-[80vh]">
-        {#if intersecting}
-        <div
-        transition:fly={{ delay: 50, duration: 2500, x: 600, y: 0, opacity: 0.01, easing: quintOut }}
-          >
-          <div>
-            <p class=" text-5xl md:text-7xl font-thin">
-              "Outstanding high-quality service and deliverables. The collaboration was great, and the final result was top-notch. Definitely recommend it."
-            </p>
+    <div class="">
+      <IntersectionObserver element={test} let:intersecting>
+        <div bind:this={test} class="">
+          {#if intersecting}
+          <div
+          transition:fly={{ delay: 50, duration: 2500, x: 600, y: 0, opacity: 0.01, easing: quintOut }}
+            >
+            <div>
+              <p class=" text-5xl md:text-7xl font-thin">
+                "Outstanding high-quality service and deliverables. The collaboration was great, and the final result was top-notch. Definitely recommend it."
+              </p>
+            </div>
+            <div class="text-white opacity-50 text-xl font-thin py-8">
+              Co-Founder - HoRizen
+            </div>
+            </div>
+          {/if}
           </div>
-          <div class="text-white opacity-50 text-xl font-thin py-8">
-            Co-Founder - HoRizen
-          </div>
-          </div>
-        {/if}
-        </div>
-      </IntersectionObserver>
+        </IntersectionObserver>
+    </div>
   </div>
 </div>
 
 <div class="bg-black w-full h-full flex flex-col px-6 md:px-10 lg:px-20 justify-start items-center overflow-hidden">
-  <div class=" w-full h-full min-h-[120vh] flex flex-col md:flex-row px-6 md:px-10 lg:px-20 overflow-hidden justify-center items-start">
+  <div class=" w-full h-full min-h-[120vh] md:min-h-[90vh] flex flex-col md:flex-row px-6 md:px-10 lg:px-20 overflow-hidden justify-center items-start">
     <div class="md:w-1/4 w-full h-full pt-2 shrink-0">
       ✱ Frequently Asked Questions
     </div>

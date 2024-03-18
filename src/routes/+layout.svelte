@@ -77,7 +77,7 @@
 		},
 		{
 			title: "Start A Project",
-			url: 'mailto:montoya@astralta.com',
+			url: '/apply',
 			active: true,
 		},
 
@@ -96,7 +96,7 @@
 		},
 		{
 			title: "Start A Project",
-			url: 'mailto:montoya@astralta.com',
+			url: '/apply',
 			active: true,
 		},
 	]
@@ -105,7 +105,7 @@
 	
 </script>
 
-<div class="relative min-h-screen flex flex-col">
+<div class="relative min-h-screen flex flex-col bg-black">
 	<div class="w-full h-16 relative py-4 top-0 px-4 justify-center items-center flex flex-col bg-transparent">
 		<div class="w-4/5 lg:w-3/4 h-12 flex flex-row justify-between items-center rounded-full dark:bg-[#656565] bg-black bg-opacity-5 z-50 dark:bg-opacity-10 backdrop-blur-md fixed top-4 border-2 border-opacity-0 border-white px-6">
 			<a href="/" class="flex flex-row justify-center items-center">
