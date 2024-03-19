@@ -84,7 +84,7 @@
 	  </IntersectionObserver>
 </div>
 
-<div class="w-full h-full md:min-h-[110vh] min-h-[70vh] sm:min-h-[90vh] bg-[url('/bgs/org.jpg')] bg-cover flex flex-col justify-center items-center">
+<div class="w-full h-full md:min-h-[110vh] min-h-[70vh] sm:min-h-[90vh] bg-[url('/bgs/org.jpg')] bg-cover flex flex-col justify-center items-center overflow-hidden">
 	<IntersectionObserver element={mainmockup} let:intersecting>
 		<div bind:this={mainmockup} class="">
 			{#if intersecting}
@@ -113,7 +113,7 @@
 			{#if intersecting}
 			<div>
 			<div transition:fly={{ delay: 50, duration: 2500, x: 800, y: 0, opacity: 0.01, easing: quintOut }}>
-				<p class="text-4xl md:text-5xl lg:text-6xl font-thin">
+				<p class="text-3xl md:text-4xl lg:text-5xl font-thin">
 					A fully custom web application for a digital marketing agency managing clients with multiple properties each.
 
 					<br>

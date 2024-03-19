@@ -305,7 +305,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
             </div>
 
             <div>
-              <a href="https://adrian.astralta.com/" class="">
+              <a href="/projects/portfolio" class="">
                 <img src="/posters/adrian.png" alt="ad" class="{biggerClass}">
               </a>
 
