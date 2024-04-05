@@ -16,7 +16,11 @@
     import { quintOut, cubicInOut, quintInOut } from 'svelte/easing';
     import { calendly, footerColor } from "../stores";
 
-    const words = 'Bring your business to the world wide web'
+    // const words = 'Bring your business to the world wide web'
+    // const words = "Attract qualified customers and investors to your startup from the world wide web."
+    const words = "Attract clients for your business from the world wide web."
+    // brick and morter
+    // Tech Startups#
 
 
     const actionButtons = [
@@ -238,8 +242,8 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
           {#if intersecting}
           <div>
             <div transition:fly={{ delay: 50, duration: 2500, x: 800, y: 0, opacity: 0.01, easing: quintOut }}>
-              <p class=" text-5xl md:text-7xl font-thin">
-                We are a purpose-driven studio based in Munich, Germany - with expertise across branding, web design, web development and AI.
+              <p class=" text-5xl md:text-7xl font-thin text-[#727272]">
+                We are a <b class="text-white font-thin">purpose-driven software studio</b> based in Munich, Germany - with expertise across <b class="text-white font-thin">storytelling</b>, <b class="text-white font-thin">web design</b>, <b class="text-white font-thin">brand identity</b> and <b class="text-white font-thin">AI</b>.
               </p>
         
               <div class="h-40 w-full flex flex-col md:flex-row py-10 mb-32 sm:mb-12">
@@ -250,9 +254,10 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
                 </div>
       
                 <div transition:fly={{ delay: 250, duration: 2000, x: 800, y: 0, opacity: 0.1, easing: quintOut }} class="text-[#727272]">
-                  We help you find clarity in your message, and communicate that to your audience in an efficient way. We use purposeful design and consumer psychology to cut through the noise and put focus on your message. 
+                  We help you define clarity in your message and vision. Then we communicate that to your audience through visuals, interactions and experiences that align to your business strategy. For you this means greater percieved value of your brand and your business, which directly translates into more suitable and higher-paying clients that resonate with your product.
+                  <!-- We help you find clarity in your message, and communicate that to your audience in an efficient way. We use purposeful design and consumer psychology to cut through the noise and put focus on your message.  -->
                   <br> <br>
-                  Put simply, <b class="font-normal text-white">we make it easier for brands to communicate their vision</b>.
+                  Put simply, <b class="font-normal text-white">we make it easier for your customers to understand the value of your product. </b>.
                 </div>
               </div>
             </div>
@@ -273,6 +278,9 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
         <div
         transition:fly={{ delay: 10, duration: 1500, x: -600, y: 0, opacity: 0.01, easing: quintOut }}
           >
+          <span>
+            (Sample)
+          </span>
           <h2 class="w-full text-9xl md:text-[200px] lg:text-[300px] xl:text-[400px] text-white font-bold uppercase flex">
             work
           </h2>
@@ -434,7 +442,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
                 <Accordion.Content
                   class="text-[#9c9c9c] text-xl font-light"  
                 >
-                  We charge a simple project fee, depending on scope of work. Most of our web design projects range between $5,000 for a single landing page, to $20,000 for a complex, multipage CMS site. We don't offer hourly work. SaaS development starts at $25.000.
+                  We charge a simple project fee, depending on scope of work. Most of our web design projects range between $4,000 for a single landing page, to $20,000 for a complex, multipage CMS site. We don't offer hourly work. SaaS development starts at $25.000.
                   </Accordion.Content
                 >
               </Accordion.Item>
@@ -444,7 +452,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
                   class="text-[#9c9c9c] text-xl font-light"  
                 >
                   50% upfront and 50% after launch. We also offer custom pricing plans on a case-by-case basis. This is all discussed in our first meeting.
-                  </Accordion.Content
+                  </Accordion.Content 
                 >
               </Accordion.Item>
               <Accordion.Item value="item-5" class="py-6">
