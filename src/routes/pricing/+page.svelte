@@ -8,16 +8,18 @@
     import Separator from '$lib/components/ui/separator/separator.svelte';
     import { onMount } from 'svelte';
     import { calendly } from '../../stores';
+    import { footerColor } from '../../stores';
 
     let show;
     $: show = false;
 
     onMount(() => {
         show = true;
+        footerColor.set("bg-gradient-to-b from-emerald-400 to-black")
     })
     
 
-    const words = 'A website you can be genuinely proud of'
+    const words = 'The perfect place for your clients to get to know you and your business.'
 
 
 </script>
@@ -35,13 +37,13 @@
     <div
         class="md:w-1/2 w-full text-center px-4">
         <p class="tracking-wide opacity-50 font-light">
-            From a complete professional website to a market-ready Web App MVP. Simple pricing. No hidden fees.
+            From one-page websites to multi-page eCommerce Shops or MVPs for B2B & B2C Tech Startups.
         </p>
     </div>
     
     <div class="w-full flex felx-col justify-center items-center py-4 pt-20">
         <p class="tracking-wide opacity-50 font-light w-3/4 text-xs text-center flex justify-center ">
-            Simply combine one development package. The retainer cost is negotiated transparently during our first assssement call.
+            Simply select one package. The retainer cost is negotiated transparently during our first assssement call.
         </p>
     </div>
 
@@ -52,7 +54,7 @@
                 Development cost
             </p>
             <h2 class="text-4xl font-bold">
-                $2K - $10K
+                $3K - $10K
             </h2>
 
             <p class="opacity-40 py-1">
@@ -67,7 +69,7 @@
                           </svg>
     
                           <span>
-                            1 - 3 Pages
+                            1 - 5 Pages
                           </span>
                     </li>
                     <li class="w-full flex flex-row gap-2 justify-start items-center">
@@ -135,7 +137,7 @@
                           </svg>
     
                           <span>
-                            4 - 16 Pages
+                            5 - 16 Pages
                           </span>
                     </li>
                     <li class="w-full flex flex-row gap-2 justify-start items-center">
@@ -182,7 +184,7 @@
                           </svg>
     
                           <span>
-                            Integrated Blog
+                            Unlimited Revisions
                           </span>
                     </li>
 
@@ -196,7 +198,7 @@
                           </svg>
     
                           <span>
-                            AI Tools (i.e. Custom Assistant)
+                            Native AI Integration
                           </span>
                     </li>
 
@@ -206,7 +208,7 @@
                           </svg>
     
                           <span>
-                            Brand Identity Design
+                            Google Business Profile Optimisation
                           </span>
                     </li>
                     <li class="w-full flex flex-row gap-2 justify-start items-center">
@@ -215,9 +217,27 @@
                           </svg>
     
                           <span>
-                            Unlimited Revisions
+                            Brand Style Creation and Guideliness
                           </span>
                     </li>
+                    <li class="w-full flex flex-row gap-2 justify-start items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-emerald-400">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                        </svg>
+  
+                        <span>
+                          Blog posts for SEO
+                        </span>
+                  </li>
+                  <li class="w-full flex flex-row gap-2 justify-start items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-emerald-400">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                      </svg>
+
+                      <span>
+                        Online Shop
+                      </span>
+                </li>
                 </ul>
             </div>
 
@@ -237,7 +257,7 @@
             </h2>
 
             <p class="opacity-40 py-1">
-                Active maintaining starts at 1200€/mo
+                Active maintaining starts at 400€/mo
             </p>
 
             <div class="w-full h-full flex flex-col gap-2 py-4">
@@ -295,7 +315,7 @@
                           </svg>
     
                           <span>
-                            Integrated Blog
+                            Unlimited Revisions
                           </span>
                     </li>
                     <li class="w-full flex flex-row gap-2 justify-start items-center">
@@ -304,16 +324,7 @@
                           </svg>
     
                           <span>
-                            In-House CRM
-                          </span>
-                    </li>
-                    <li class="w-full flex flex-row gap-2 justify-start items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-emerald-400">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
-                          </svg>
-    
-                          <span>
-                            Integrated Blog
+                            Native CMS
                           </span>
                     </li>
 
@@ -327,7 +338,7 @@
                           </svg>
     
                           <span>
-                            Pro AI Tools*
+                            Pro Native AI Tools*
                           </span>
                     </li>
 
@@ -337,7 +348,7 @@
                           </svg>
     
                           <span>
-                            Brand Identity Design
+                            Brand Style Creation and Guideliness
                           </span>
                     </li>
                     <li class="w-full flex flex-row gap-2 justify-start items-center">
@@ -346,7 +357,7 @@
                           </svg>
     
                           <span>
-                            AI Website Analytics
+                            Pro Website Analytics & Predictions
                           </span>
                     </li>
                     <li class="w-full flex flex-row gap-2 justify-start items-center">
@@ -355,9 +366,18 @@
                           </svg>
     
                           <span>
-                            Unlimited Revisions
+                            Google Business Profile
                           </span>
                     </li>
+                    <li class="w-full flex flex-row gap-2 justify-start items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-emerald-400">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                        </svg>
+  
+                        <span>
+                          Private Consulting
+                        </span>
+                  </li>
 
                     <li class="w-full flex flex-row gap-2 justify-start items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-emerald-400">
