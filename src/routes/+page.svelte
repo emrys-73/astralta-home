@@ -170,6 +170,8 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
 <!-- Praise the Lord -->
 
 
+
+
 <div class="w-full h-full min-h-screen flex flex-col">
   <div
   class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden rounded-md bg-white antialiased dark:bg-black dark:bg-grid-white/[0.05] lg:pt-[30vh] pt-[25vh]"
