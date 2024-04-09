@@ -210,7 +210,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
     </IntersectionObserver>
   </div>
   
-  <div class="py-24">
+  <div class="py-24 hidden">
     <InfiniteMovingBoxes items={cards} direction="left" speed="fast" />
   </div>
 
@@ -316,7 +316,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
 
             <div>
               <a href="/projects/portfolio" class="">
-                <img src="/posters/adrian.png" alt="ad" class="{biggerClass}">
+                <img src="/posters/me.png" alt="ad" class="{biggerClass}">
               </a>
 
               <div class="px-20 flex flex-col gap-2">
