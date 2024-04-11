@@ -68,7 +68,7 @@
             {#each items as item, idx (item.name)}
 
                     <div class="w-full">
-                      <h2 class="text-[300px] font-bold">
+                      <h2 class="text-9xl md:text-[300px] font-bold">
                         {item.content}
                       </h2>
 

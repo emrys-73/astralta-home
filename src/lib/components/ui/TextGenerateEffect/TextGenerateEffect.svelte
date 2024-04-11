@@ -17,8 +17,8 @@
     };
     </script>
     
-    <div class={cn('font-light', className)}>
-        <div class="mt-4 py-10">
+    <div class={cn('font-normal', className)}>
+        <div class="mt-4 py-4">
             <div class=" bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-5xl text-transparent md:text-7xl lg:text-8xl">
                 <Motion let:motion custom={0} {variants} initial="hidden" animate={'visible'}>
                     <div use:motion>
