@@ -190,7 +190,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
   class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden rounded-md bg-white antialiased dark:bg-black dark:bg-grid-white/[0.05] lg:pt-[25vh] pt-[25vh]"
   >
   <div class="w-full px-8 h-full min-h-[40vh] flex flex-col">
-    <div class="md:w-4/5 w-full px-8 md:px-10 lg:px-20">
+    <div class="md:w-4/5 w-full sm:px-8 md:px-10 lg:px-20">
       <TextGenerateEffect {words} />
       <div class="w-full h-full flex pb-20">
         <IntersectionObserver element={maincta} let:intersecting>
@@ -199,7 +199,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
             <div
             transition:fly={{ delay: 300, duration: 3000 }}
               >
-              <Button href="/apply" class="bg-transparent my-2 border-2 border-white border-opacity-40 text-xl rounded-full px-12 py-2 hover:text-black hover:px-40 transition-all duration-300 ease-in-out text-white">
+              <Button href="/apply" class="bg-transparent my-2 border-2 border-white border-opacity-40 text-lg md:text-xl rounded-full px-12 py-2 hover:text-black hover:px-16 md:hover:px-40 transition-all duration-300 ease-in-out text-white">
                 Start with a free strategy call
               </Button>
             </div>
@@ -410,7 +410,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
       
                 <div class="w-auto">
                   <p class="text-[#868686]">
-                    Apply for a free session <a href="/appley" class="text-white opacity-80 hover:opacity-100 transition-all duration-300 ease-in-out">→ here</a>
+                    Apply for a free session <a href="/apply" class="text-white opacity-80 hover:opacity-100 transition-all duration-300 ease-in-out">→ here</a>
                   </p>
                 </div>
               </div>

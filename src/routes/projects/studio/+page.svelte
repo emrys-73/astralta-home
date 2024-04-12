@@ -118,10 +118,10 @@
                         We are building the world’s first Operating Intelligence System*. 
 
                         <br><br>
-                        our vision for an operating intelligence system is to re-think how we interact with machine and - through and with ai - how machines interact with us.
+                        Our vision for an operating intelligence system is to re-think how we interact with machine and - through and with AI - how machines interact with us.
 
                         <br><br>
-                        we believe orchestrating thousands (if not millions) of AI system should be simple and intuitive enough as it is for your computer to run billions of operations with one click.
+                        We believe orchestrating thousands (if not millions) of AI system should be simple and intuitive enough as it is for your computer to run billions of operations with one click.
                     </p>
                 </div>
                 </div>

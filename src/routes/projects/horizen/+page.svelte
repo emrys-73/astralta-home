@@ -132,7 +132,7 @@
 
 <div class="w-full h-full bg-[#FF620B] relative flex flex-col xl:flex-row min-h-[80vh] sm:min-h-[90vh] lg:min-h-[90vh]">
 
-	<div class="w-full h-auto flex flex-col justify-start items-start px-8 py-20">
+	<div class="w-full h-auto flex flex-col justify-start items-start px-8 py-10">
 		<IntersectionObserver element={aiheader} let:intersecting>
 			<div bind:this={aiheader} class="">
 			 {#if intersecting}
@@ -141,7 +141,7 @@
 					class=""
 					>
 					<h2 class=" text-4xl sm:text-5xl lg:text-6xl xl:text-8xl font-bold text-white uppercase flex justify-start items-start text-start ">
-						✱ HORIZEN - Powered by AI
+						✱ HORIZEN
 					</h2>
 					</div>
 				{/if}
@@ -157,8 +157,8 @@
 					transition:fly={{ delay: 10, duration: 1000, x: 400 }} 
 					class="overflow-hidden"
 					>
-					<ul class="w-full h-full gap-6 flex flex-col text-xl md:text-2xl xl:text-3xl font-light justify-center items-start">
-						<li>
+					<ul class="w-full h-full gap-6 flex flex-col text-xl lg:text-2xl font-light justify-center items-start">
+					<li>
 							✱ Optimal pricing analytics & prediction
 						</li>
 						<li>

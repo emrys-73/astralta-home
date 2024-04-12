@@ -85,27 +85,9 @@
             </div>
           </IntersectionObserver>
     </div>
-    
-    <div class="w-full h-full md:min-h-[110vh] min-h-[50vh] sm:min-h-[70vh] flex-col justify-center items-center hidden">
-        <IntersectionObserver element={mainmockup} let:intersecting>
-            <div bind:this={mainmockup} class="w-full h-full flex">
-                {#if true}
-    
-                <div
-                    
-                    class="w-full h-full flex"
-                >
-                <iframe title="spline" src="https://my.spline.design/cybermannequin-ea37d17e0f32dd6d661401b2040a193b/" frameborder="0" class="w-full h-full flex  z-10 min-h-[80vh]"/>
 
-                </div>
     
-                {/if}
-            </div>
-    
-        </IntersectionObserver>
-    </div>
-    
-    <div class=" w-full h-full md:min-h-[100vh] min-h-[120vh] flex flex-col md:flex-row px-6 md:px-10 lg:px-20 bg-black overflow-hidden  justify-center items-start md:py-[10vh] lg:pt-[20vh]">
+    <div class=" w-full h-full flex flex-col md:flex-row px-6 md:px-10 lg:px-20 bg-black overflow-hidden  justify-center items-start md:py-[10vh] lg:pt-[20vh]">
         <div class="w-1/4 h-full pt-2 shrink-0 py-6 md:py-0">
             ✱ HEADLINE
         </div>
@@ -142,7 +124,7 @@
                 <div transition:fly={{ delay: 50, duration: 2500, y: -800, opacity: 0.01, easing: quintOut }}
                     class="text-2xl flex flex-col gap-6"
                 >
-                    <img src="/mockups/mocks.png" alt="mockup" class="">
+                    <img src="/posters/me.png" alt="mockup" class="scale-75">
                     </div>
                 </div>
                 {/if}
