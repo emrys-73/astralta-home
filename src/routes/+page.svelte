@@ -725,7 +725,8 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
                 <Accordion.Content
                   class="text-[#9c9c9c] text-xl font-light"  
                 >
-                  We charge a simple project fee, depending on scope of work. Most of our web design projects range between $4,000 for a single landing page, to $20,000 for a complex, multipage CMS site. We don't offer hourly work. SaaS development starts at $25.000.
+                  <!-- We charge a simple project fee, depending on scope of work. Most of our web design projects range between $4,000 for a single landing page, to $20,000 for a complex, multipage CMS site. We don't offer hourly work. SaaS development starts at $25.000. -->
+                  We charge a simple project fee depending on scope of work. Most of our web design projects range between $3,000 for a one-page website, to $15 000 for a complex, multipage CMS site. We don't offer hourly work. 
                   </Accordion.Content
                 >
               </Accordion.Item>
