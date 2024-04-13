@@ -275,7 +275,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
 
   </div>
 
-  <div class=" w-full h-full min-h-[60vh] flex flex-col md:flex-row px-6 md:px-10 lg:px-20 pb-40 overflow-hidden">
+  <div id="about" class=" w-full h-full min-h-[60vh] flex flex-col md:flex-row px-6 md:px-10 lg:px-20 pb-40 overflow-hidden">
     <div class=" w-full h-full flex flex-col md:px-8 py-10 md:py-0">
       <div class="w-1/4 h-full pt-2 py-10 shrink-0">
         ✱ Welcome
@@ -357,7 +357,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
   </div>
 </div>
 
-<div class="bg-black w-full h-full flex flex-col px-6 md:px-10 lg:px-20 justify-start items-center overflow-hidden">
+<div id="process" class="bg-black w-full h-full flex flex-col px-6 md:px-10 lg:px-20 justify-start items-center overflow-hidden">
   <div class=" w-full md:min-h-[50vh] min-h-[20vh]">
     <IntersectionObserver element={flow} let:intersecting>
       <div bind:this={flow} class="">
@@ -553,7 +553,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
 </div>
 
 
-<div class="bg-black w-full h-full flex flex-col px-6 md:px-10 lg:px-20 justify-start items-center overflow-hidden py-20">
+<div id="cases" class="bg-black w-full h-full flex flex-col px-6 md:px-10 lg:px-20 justify-start items-center overflow-hidden py-20">
   <div class=" w-full md:min-h-[50vh] min-h-[20vh]">
     <IntersectionObserver element={workt} let:intersecting>
       <div bind:this={workt} class="">
@@ -688,7 +688,7 @@ const biggerClass = "scale-90 hover:scale-95 transition-all duration-300 ease-in
   </div>
 </div>
 
-<div class="bg-black w-full h-full flex flex-col px-6 md:px-10 lg:px-20 justify-start items-center overflow-hidden">
+<div id="faqs" class="bg-black w-full h-full flex flex-col px-6 md:px-10 lg:px-20 justify-start items-center overflow-hidden">
   <div class=" w-full h-full min-h-[120vh] md:min-h-[90vh] flex flex-col md:flex-row px-6 md:px-10 lg:px-20 overflow-hidden justify-center items-start">
     <div class="md:w-1/4 w-full h-full pt-2 shrink-0">
       ✱ Frequently Asked Questions

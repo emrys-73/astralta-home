@@ -56,43 +56,52 @@
 
 	const menu = [
 		{
-			title: "Projects",
-			url: '/projects',
-			active: false,
+			title: "About Us",
+			url: '/#about',
+			active: true,
 		},
 		{
-			title: "Showcases",
-			url: '/',
-			active: false,
+			title: "Process",
+			url: '/#process',
+			active: true,
 		},
 		{
-			title: "Pricing",
-			url: '/pricing',
-			active: false,
+			title: "Use Cases",
+			url: '/#cases',
+			active: true,
 		},
 		{
-			title: "About",
-			url: '/',
-			active: false,
+			title: "FAQs",
+			url: '/#faqs',
+			active: true,
 		},
 		{
 			title: "Start For Free",
 			url: '/apply',
 			active: true,
 		},
-
 	]
 
 	const menuSmall = [
 		{
-			title: "Projects",
-			url: '/projects',
-			active: false,
+			title: "About Us",
+			url: '/#about',
+			active: true,
 		},
 		{
-			title: "Pricing",
-			url: '/pricing',
-			active: false,
+			title: "Process",
+			url: '/#process',
+			active: true,
+		},
+		{
+			title: "Use Cases",
+			url: '/#cases',
+			active: true,
+		},
+		{
+			title: "FAQs",
+			url: '/#faqs',
+			active: true,
 		},
 		{
 			title: "Start For Free",
